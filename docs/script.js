@@ -5,7 +5,10 @@ function updateTime() {
   const minutes = now.getMinutes().toString().padStart(2, "0");
   hours = hours % 12 || 12;
 
-  document.getElementById("time").textContent = `${hours}:${minutes}`;
+  const timeEl = document.getElementById("time");
+  if (timeEl) {
+    timeEl.textContent = `${hours}:${minutes}`;
+  }
 
   const days = [
     "Sunday", "Monday", "Tuesday", "Wednesday",
