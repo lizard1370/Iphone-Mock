@@ -31,4 +31,4 @@ A realistic **iPhone mockup** project built with HTML, CSS, and JavaScript — f
 ## 🚀 How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/iphone-mockup.git
+   [link](https://lizard1370.github.io/Iphone-Mock/docs/)
