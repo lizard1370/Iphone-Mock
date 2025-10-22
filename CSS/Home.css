@@ -36,7 +36,7 @@ body {
 {
     position: absolute;
     inset: 3px;
-    background: url(bg.jpg);
+    background: url(/IMG/bg.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 48px;
@@ -111,18 +111,20 @@ ion-icon.green
     opacity: 1;
     transition-delay: 0.25s;
 }
-.btn
-{
-    position: absolute;
-    top: 130px;
-    left: -2px;
-    width: 3px;
-    height: 40px;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background: radial-gradient(#ccc, #666, #222);
-    z-index: 10;  
+.btn {
+  position: absolute;
+  top: 130px;
+  left: -2px;
+  width: 3px;
+  height: 40px;
+  border-radius: 4px;
+  background: radial-gradient(#ccc, #666, #222);
+  z-index: 10;
+  transform: rotate(0deg); /* tilt the button */
+  transform-origin: center;
 }
+
+
 .btn2
 {
     position: absolute;

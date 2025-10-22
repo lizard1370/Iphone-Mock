@@ -31,7 +31,7 @@ function updateTime() {
 }
 
 function openApp(url) {
-  window.location.href = url;
+  window.location.href = "/HTML/home.html";
 }
 
 setInterval(updateTime, 60000);
