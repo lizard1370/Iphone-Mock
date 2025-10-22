@@ -29,4 +29,5 @@ A realistic **iPhone mockup** project built with HTML, CSS, and JavaScript — f
 ---
 
 ## 🚀 How to Use
+   **Bash
    [link](https://lizard1370.github.io/Iphone-Mock/docs/)
