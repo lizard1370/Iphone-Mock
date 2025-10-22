@@ -1,27 +1,45 @@
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>YouTube</title>
+  <title>iPhone Home Screen</title>
   <link rel="stylesheet" href="styleyt.css">
 </head>
 <body>
-  <div class="box">
-    <div class="inner">
+    <div class="box">
+        <div class="inner-home">
+            <div class="island_popup">
+                <div class="content">
+                    <div class="detais">
+                        <p>Alex is calling</p>
+                    </div>
+                    <div class="action">
+                        <ion-icon name="call" class="red"></ion-icon>
+                        <ion-icon name="call" class="green"></ion-icon>
+                    </div>
+                </div>
+            </div>
       <div class="inner-text">
           <p>Playing trending video</p>
         <section class="player">
           <div class="video-wrap" id="videoWrap">
-            <iframe id="ytplayer" src="https://www.youtube.com/embed/1prd93NWgyM?si=cbz5DK1t9Q8Sfrj2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="ytplayer" src="https://www.youtube.com/embed/1prd93NWgyM?si=cbz5DK1t9Q8Sfrj2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </section>
       </div>
-        <div class="home-btn">
-        <a href="home.html" id="editBtn" class="content2"></a>
-      </div>
-      </div>
-    </div>
-    </div> 
-  </div>
+            <div class="island_bottom">
+                <a href="home.html" id="editBtn" class="content2"></a>
+            </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="scripthome.js"></script>
 </body>
 </html>
