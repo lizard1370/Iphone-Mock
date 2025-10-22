@@ -17,16 +17,16 @@ A realistic **iPhone mockup** project built with HTML, CSS, and JavaScript — f
 
 - **Apps:** [Tanner Braden](https://github.com/tbraden-jpg)  
 - **Wallpaper source:** [iOS 16 Lock Screen with iPhone 14 Wallpaper](https://preview.redd.it/ios-16-lock-screen-with-iphone-14-wallpaper-v0-ohgsnjczbum91.jpg?width=640&crop=smart&auto=webp&s=a110148093954240ae21e66632c0b11a9311281e)  
-- **iPhone base, home screen, clock JavaScript, Dynamic Island, and bottom Dynamic Island:** Created by Me
+- **iPhone base:** [Kevin Fries](https://github.com/lizard1370)  
 
 ---
 
 ## ⚙️ Technologies Used
-- HTML5  
-- CSS3  
-- JavaScript (ES6+)  
+- HTML 
+- CSS  
+- JavaScript
 
 ---
 
 ## 🚀 How to Use
-   [Iphone-Mock](https://lizard1370.github.io/Iphone-Mock/docs/)
+   **[Iphone-Mock](https://lizard1370.github.io/Iphone-Mock/docs/)**
