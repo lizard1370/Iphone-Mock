@@ -33,6 +33,9 @@ function updateTime() {
 function openApp(url) {
   window.location.href = url;
 }
+function openWidget(url) {
+  window.location.href = url;
+}
 
 setInterval(updateTime, 60000);
 updateTime();

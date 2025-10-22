@@ -163,6 +163,7 @@ ion-icon.green
     overflow: hidden;
     transition: 0.5s;
 }
+
 .island_popup
 {
     position: absolute;
@@ -258,6 +259,32 @@ ion-icon.green
   backdrop-filter: blur(8px);
   margin-bottom: 4px;
   transition: 0.3s ease;
+}
+.widget {
+  grid-column: span 2;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 0.8em;
+  position: relative;
+  top: -5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.widget-content ion-icon {
+  font-size: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
 }
 .time-container 
 {
