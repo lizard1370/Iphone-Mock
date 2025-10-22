@@ -34,7 +34,7 @@ body
 {
     position: absolute;
     inset: 3px;
-    background: url(/bg.jpg);
+    background: url(bg.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 48px;
