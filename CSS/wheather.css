@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
 *
 {
@@ -6,16 +7,120 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body {
-  background: #000;
-  color: #fff;
-  font-family: sans-serif;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+h1 
+{ 
+    margin: 0 0 12px; 
+    font-size: 20px;
+    position: relative;
+    align-items: center;
+    top: 160px;
+    width: 100%; /* Or any specific width */
+    margin: 0 auto; /* Top/bottom margin 0, left/right auto */
 }
+
+
+
+/* Center and position title close to the island */
+.wheather-Name {
+  position: relative;  /* let it flow naturally */
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px; /* space between title and grid */
+}
+
+.scroll-container {
+  width: 100%;
+  max-height: 480px;
+  overflow-y: auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+
+  /* fade effect */
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, rgba(0,0,0,0));
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
+
+
+
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+.wheather-Name h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0px;
+}
+
+/* Adjust grid so it sits lower after the title */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  justify-items: center;
+  margin-top: 5px; /* moves grid lower so it doesn't overlap title */
+}
+
+
+
+.app {
+  width: 110px;
+  height: 110px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(54, 54, 54, 0.2);
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(150, 150, 150, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+}
+
+.app:hover {
+  transform: scale(1.05);
+  background: black;
+}
+
+.app h3 {
+  margin: 0;
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.app p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+ body {
+      font-family: system-ui, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
 .box 
 {
     position: relative;
@@ -32,11 +137,10 @@ body {
     background: #000;
     border-radius: 48px;
 }
-.inner-home
+.inner 
 {
     position: absolute;
     inset: 3px;
-    background: url(/IMG/bg.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 48px;
@@ -45,7 +149,8 @@ body {
     justify-content: center;
     opacity: 1;
     transition: 0.5s;
-}.box:hover .inner
+}
+.box:hover .inner
 {
     opacity: 1;
 }
@@ -60,6 +165,24 @@ body {
     border-bottom-right-radius: 4px;
     background: radial-gradient(#ccc, #666, #222);
     z-index: 10;
+}
+.island_popup
+{
+    position: absolute;
+    top: 10px;
+    width: 90px;
+    height: 25px;
+    background: #000;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.island_popup:hover
+{
+    width: 200px;
+    height: 25px;
 }
 .content
 {
@@ -123,8 +246,6 @@ ion-icon.green
   transform: rotate(0deg); /* tilt the button */
   transform-origin: center;
 }
-
-
 .btn2
 {
     position: absolute;
@@ -155,7 +276,7 @@ ion-icon.green
     display: flex;
     align-items: center;
 }
-.inner-home .imgBx
+.detais .imgBx
 {
     width: 0px;
     position: relative;
@@ -164,25 +285,6 @@ ion-icon.green
     border-radius: 50%;
     overflow: hidden;
     transition: 0.5s;
-}
-
-.island_popup
-{
-    position: absolute;
-    top: 10px;
-    width: 90px;
-    height: 25px;
-    background: #000;
-    border-radius: 20px;
-    transition: 0.5s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.island_popup:hover
-{
-    width: 200px;
-    height: 25px;
 }
 .island_bottom 
 {
@@ -195,7 +297,12 @@ ion-icon.green
     transition: 0.3s ease-in-out;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;  
+    display:block;
+    border:0 none;
+    cursor:pointer;
+    outline: none;
+    box-shadow: white;  
 }
 .island_bottom:hover
 {
@@ -210,105 +317,35 @@ ion-icon.green
     justify-content: space-between;
     align-items: center;   
 }
-.content2
-{
-    display:block;
-    border:0 none;
-    cursor:pointer;
-    outline:none;
-    cursor: pointer;
-    top: 560px;
-    width: 90px;
-    height: 7px;
-    background: gray;
-    border-radius: 20px;
-    box-shadow: white;
-    transition: 0.3s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;   
-}
-.app-grid 
-{
+.inner-home {
   position: absolute;
-  top: 40px;
-  width: 85%;
-  left: 10px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px 15px;
-  justify-items: center;
-  align-items: center;
-}
-
-.app 
-{
+  inset: 3px;
+  background: linear-gradient(180deg, #8b3eff, #7a2bda, #6215b9);
+  border-radius: 48px;
+  border: 10px solid #000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  font-size: .8em;
-  border-radius: 102px;
-}
-.app ion-icon 
-{
-  font-size: 30px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 10px;
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  margin-bottom: 4px;
-  transition: 0.3s ease;
-}
-.widget {
-  grid-column: span 2;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 10px 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  color: #fff;
-  font-size: 0.8em;
-  position: relative;
-  top: -5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.widget-content ion-icon {
-  font-size: 24px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 10px;
-  cursor: pointer;
-  position: relative;
-  border-radius: 10px;
-}
-.time-container 
-{
-    position: absolute;
-    top: 90px;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    z-index: 5;
-    font-family: 'Poppins', sans-serif;
+  justify-content: flex-start; /* align items from the top */
+  padding-top: 30px; /* distance from the very top edge */
+  overflow: hidden;
 }
 
 
-.h2 {
-  cursor: pointer;
-  position: relative;
-  right: 0px;
-  top: -50px;
-}
-.h3 {
-  cursor: pointer;
-  position: relative;
-  right: -55px;
-  top: -50px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
