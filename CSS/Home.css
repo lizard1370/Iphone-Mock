@@ -120,7 +120,7 @@ ion-icon.green
   border-radius: 4px;
   background: radial-gradient(#ccc, #666, #222);
   z-index: 10;
-  transform: rotate(0deg); /* tilt the button */
+  transform: rotate(0deg); 
   transform-origin: center;
 }
 
