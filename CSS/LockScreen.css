@@ -304,7 +304,7 @@ ion-icon.green
   justify-content: center;
   align-items: center;
   z-index: 50;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(7px);
 }
 
 .passcode-popup.active {
