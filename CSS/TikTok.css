@@ -217,7 +217,7 @@ ion-icon.green
 {
     position: absolute;
     inset: 3px;
-    background: url(Iphone-Mock/IMG/bg.jpg);
+    background: url(/Iphone-Mock/IMG/bg.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 48px;
