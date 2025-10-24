@@ -296,3 +296,73 @@ ion-icon.green
     opacity: 1;
     transition: 0.5s;
 }
+.passcode-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 50;
+  backdrop-filter: blur(6px);
+}
+
+.passcode-popup.active {
+  display: flex;
+}
+
+.passcode-box {
+  background: rgba(20,20,20,0.9);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  width: 240px;
+}
+
+.passcode-box h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: background 0.2s;
+}
+
+.dots span.filled {
+  background: #fff;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.keypad button {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2em;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.keypad button:hover {
+  background: rgba(255,255,255,0.3);
+}

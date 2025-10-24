@@ -36,3 +36,46 @@ function openApp(url) {
 
 setInterval(updateTime, 60000);
 updateTime();
+const unlockBtn = document.getElementById('unlockBtn');
+const passcodeScreen = document.getElementById('passcodeScreen');
+const dots = document.querySelectorAll('.dots span');
+const keypad = document.querySelector('.keypad');
+const clearBtn = document.getElementById('clear');
+const cancelBtn = document.getElementById('cancel');
+
+let enteredCode = '';
+const correctCode = '6767'; // change this if you want
+
+unlockBtn.addEventListener('click', () => {
+  passcodeScreen.classList.add('active');
+});
+
+keypad.addEventListener('click', (e) => {
+  const btn = e.target;
+  if (!btn.matches('button')) return;
+
+  if (btn.id === 'clear') {
+    enteredCode = enteredCode.slice(0, -1);
+  } else if (btn.id === 'cancel') {
+    enteredCode = '';
+    passcodeScreen.classList.remove('active');
+  } else {
+    enteredCode += btn.textContent;
+  }
+
+  // update dots
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('filled', i < enteredCode.length);
+  });
+
+  if (enteredCode.length === 4) {
+    if (enteredCode === correctCode) {
+      window.location.href = '/Iphone-Mock/HTML/home.html';
+    } else {
+      dots.forEach(dot => dot.classList.remove('filled'));
+      enteredCode = '';
+      alert('Incorrect code');
+    }
+  }
+});
+
