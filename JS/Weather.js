@@ -1,5 +1,5 @@
 function openApp(url) {
-  window.location.href = "/HTML/home.html";
+  window.location.href = "/Iphone-Mock/HTML/home.html";
 }
 const url = "https://api.open-meteo.com/v1/forecast?latitude=41.57204&longitude=-73.58985&current_weather=true&temperature_unit=fahrenheit";
 const cities = [
