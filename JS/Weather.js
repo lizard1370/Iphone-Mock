@@ -32,3 +32,8 @@ function fetchWeatherForCity(city) {
 
 // Loop through all cities and fetch their weather
 cities.forEach(city => fetchWeatherForCity(city));
+function openCity(city) {
+  alert("Opening weather for " + city);
+  // Or redirect:
+  // window.location.href = city.toLowerCase().replace(/\s+/g, '-') + ".html";
+}

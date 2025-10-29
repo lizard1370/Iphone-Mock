@@ -7,6 +7,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 h1 
 { 
     margin: 0 0 12px; 
@@ -26,6 +27,10 @@ h1
   text-align: center;
   margin-top: 20px;
   margin-bottom: 0px;
+}
+.app-grid a {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* keeps your text color the same */
 }
 
 .scroll-container {
