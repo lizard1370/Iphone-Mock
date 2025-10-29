@@ -81,11 +81,20 @@ keypad.addEventListener('click', (e) => {
 
 document.getElementById("fingerprint").addEventListener("click", function () {
   const icon = this.querySelector("ion-icon");
-  icon.style.color = "#cf27f5ff"; // green flash
-  icon.style.transform = "scale(1.2)";
   setTimeout(() => {
-    window.location.href = "../HTML/home.html"; // navigate
+    window.location.href = "/Iphone-Mock/HTML/home.html"; // navigate
   }, 500); // half a second delay
 });
+const fingerprintBtn = document.getElementById('fingerprint');
+
+fingerprintBtn.addEventListener('click', () => {
+  fingerprintBtn.classList.add('checked');
+
+  // Optional reset (remove if you want it to stay as a checkmark)
+  setTimeout(() => {
+    fingerprintBtn.classList.remove('checked');
+  }, 2000);
+});
+
 
 

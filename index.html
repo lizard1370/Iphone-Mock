@@ -31,8 +31,6 @@
 <div class="island_bottom">
     <a id="unlockBtn" class="content2"></a>
 </div>
-
-<!-- Passcode popup -->
 <div id="passcodeScreen" class="passcode-popup">
     <div class="passcode-box">
         <h3>Enter Passcode</h3>
@@ -40,13 +38,15 @@
             <span></span><span></span><span></span><span></span>
         </div>
         <div class="keypad">
-            <button>1</button><button>2</button><button>3</button>
-            <button>4</button><button>5</button><button>6</button>
-            <button>7</button><button>8</button><button>9</button>
-            <button id="clear">⌫</button><button>0</button><button id="cancel">×</button>
-            <button id="fingerprint">
-                <ion-icon name="finger-print-outline"></ion-icon>
+            <button class="keypad1">1</button><button class="keypad2">2</button><button class="keypad3">3</button>
+            <button class="keypad4">4</button><button class="keypad5">5</button><button class="keypad6">6</button>
+            <button class="keypad7">7</button><button class="keypad8">8</button><button class="keypad9">9</button>
+            <button class="clear" id="clear">⌫</button><button class="keypad0">0</button><button class="keypadcancel" id="cancel">×</button>
+            <button class="fingerprint" id="fingerprint">
+            <ion-icon name="finger-print-outline"></ion-icon>
+            <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
             </button>
+
         </div>
     </div>
 </div>

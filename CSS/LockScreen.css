@@ -16,6 +16,22 @@ body {
   align-items: center;
   height: 100vh;
 }
+.fingerprint:hover,
+.clear:hover,
+.keypadcancel:hover,
+.keypad1:hover,
+.keypad2:hover,
+.keypad3:hover,
+.keypad4:hover,
+.keypad5:hover,
+.keypad6:hover,
+.keypad7:hover,
+.keypad8:hover,
+.keypad9:hover,
+.keypad0:hover
+{
+  background-color: #666;
+}
 .box 
 {
     position: relative;
@@ -370,8 +386,52 @@ ion-icon.green
 #fingerprint {
   grid-column: 2;
 }
+#fingerprint {
+  position: relative;
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+  border: none;
+  font-size: 1.2em;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#fingerprint:hover
+{
+  background-color: #666;
+}
 
-#fingerprint:hover {
-  transform: scale(1.1);
-  color:#09f;
+#fingerprint ion-icon {
+  font-size: 2em;
+  color: #fff;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#fingerprint .checkmark {
+  position: absolute;
+  font-size: 2em;
+  color: #31d059;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+#fingerprint.checked ion-icon[name="finger-print-outline"] {
+  transform: scale(0);
+  opacity: 0;
+}
+
+#fingerprint.checked .checkmark {
+  opacity: 1;
+  transform: scale(1);
 }
