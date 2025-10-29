@@ -366,3 +366,12 @@ ion-icon.green
 .keypad button:hover {
   background: rgba(255,255,255,0.3);
 }
+
+#fingerprint {
+  grid-column: 2;
+}
+
+#fingerprint:hover {
+  transform: scale(1.1);
+  color:#09f;
+}

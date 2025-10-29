@@ -79,3 +79,13 @@ keypad.addEventListener('click', (e) => {
   }
 });
 
+document.getElementById("fingerprint").addEventListener("click", function () {
+  const icon = this.querySelector("ion-icon");
+  icon.style.color = "#cf27f5ff"; // green flash
+  icon.style.transform = "scale(1.2)";
+  setTimeout(() => {
+    window.location.href = "../HTML/home.html"; // navigate
+  }, 500); // half a second delay
+});
+
+
