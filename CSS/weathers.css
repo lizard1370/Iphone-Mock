@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
 *
 {
@@ -6,15 +7,47 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body {
-  background: #000;
-  color: #fff;
-  font-family: sans-serif;
-  margin: 0;
+#temperature
+{
+    position: relative;
+    top: 70px;
+    font-family: system-ui, sans-serif;
+    color: rgb(70, 57, 255);
+    margin: 0;
+    font-size: xx-large;
+}
+h1
+{
+    position: absolute;
+    top: 45px;
+    font-family: system-ui, sans-serif;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+}
+.inner-home {
+  position: absolute;
+  inset: 3px;
+  background: #393939;
+  border-radius: 48px;
+  border: 10px solid #000;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: flex-start; 
+  padding-top: 30px;
+  overflow: hidden;
+}
+body 
+{
+    font-family: system-ui, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 .box 
 {
@@ -24,19 +57,10 @@ body {
     background: #666;
     border-radius: 50px;
 }
-.box::before 
-{
-    content: '';
-    position: absolute;
-    inset: 3px;
-    background: #000;
-    border-radius: 48px;
-}
-.inner-home
+.inner 
 {
     position: absolute;
     inset: 3px;
-    background: url(/Iphone-Mock/IMG/bg.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 48px;
@@ -45,9 +69,6 @@ body {
     justify-content: center;
     opacity: 1;
     transition: 0.5s;
-}.box:hover .inner
-{
-    opacity: 1;
 }
 .rightSideBtn
 {
@@ -60,6 +81,24 @@ body {
     border-bottom-right-radius: 4px;
     background: radial-gradient(#ccc, #666, #222);
     z-index: 10;
+}
+.island_popup
+{
+    position: absolute;
+    top: 10px;
+    width: 90px;
+    height: 25px;
+    background: #000;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.island_popup:hover
+{
+    width: 200px;
+    height: 25px;
 }
 .content
 {
@@ -123,8 +162,6 @@ ion-icon.green
   transform: rotate(0deg); 
   transform-origin: center;
 }
-
-
 .btn2
 {
     position: absolute;
@@ -155,7 +192,7 @@ ion-icon.green
     display: flex;
     align-items: center;
 }
-.inner-home .imgBx
+.detais .imgBx
 {
     width: 0px;
     position: relative;
@@ -164,25 +201,6 @@ ion-icon.green
     border-radius: 50%;
     overflow: hidden;
     transition: 0.5s;
-}
-
-.island_popup
-{
-    position: absolute;
-    top: 10px;
-    width: 90px;
-    height: 25px;
-    background: #000;
-    border-radius: 20px;
-    transition: 0.5s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.island_popup:hover
-{
-    width: 200px;
-    height: 25px;
 }
 .island_bottom 
 {
@@ -195,7 +213,12 @@ ion-icon.green
     transition: 0.3s ease-in-out;
     display: flex;
     justify-content: space-between;
-    align-items: center;   
+    align-items: center;  
+    display:block;
+    border:0 none;
+    cursor:pointer;
+    outline: none;
+    box-shadow: white;  
 }
 .island_bottom:hover
 {
@@ -210,105 +233,22 @@ ion-icon.green
     justify-content: space-between;
     align-items: center;   
 }
-.content2
-{
-    display:block;
-    border:0 none;
-    cursor:pointer;
-    outline:none;
-    cursor: pointer;
-    top: 560px;
-    width: 90px;
-    height: 7px;
-    background: gray;
-    border-radius: 20px;
-    box-shadow: white;
-    transition: 0.3s ease-in-out;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;   
-}
-.app-grid 
-{
-  position: absolute;
-  top: 40px;
-  width: 85%;
-  left: 10px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px 15px;
-  justify-items: center;
-  align-items: center;
-}
-
-.app 
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #fff;
-  transition: transform 0.3s ease;
-  cursor: pointer;
-  font-size: .8em;
-  border-radius: 102px;
-}
-.app ion-icon 
-{
-  font-size: 30px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 10px;
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-  margin-bottom: 4px;
-  transition: 0.3s ease;
-}
-.widget {
-  grid-column: span 2;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 10px 12px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  color: #fff;
-  font-size: 0.8em;
-  position: relative;
-  top: -5px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.widget-content ion-icon {
-  font-size: 24px;
-  background: rgba(255, 255, 255, 0.15);
-  padding: 10px;
-  cursor: pointer;
-  position: relative;
-  border-radius: 10px;
-}
-.time-container 
-{
-    position: absolute;
-    top: 90px;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    z-index: 5;
-    font-family: 'Poppins', sans-serif;
-}
 
 
-.h2 {
-  cursor: pointer;
-  position: relative;
-  right: 0px;
-  top: -50px;
-}
-.h3 {
-  cursor: pointer;
-  position: relative;
-  right: -55px;
-  top: -50px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

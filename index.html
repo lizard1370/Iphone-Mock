@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>iPhone Lock Screen</title>
+    <link rel="stylesheet" href="/Iphone-Mock/CSS/LockScreen.css">
+</head>
+<body>
+    <button id="rotateBtn">↻ Rotate Phone</button>
+    <div class="phone-rotate-wrapper">
+    <div class="box">
+        <div class="inner">
+            <div class="time-container">
+                <div id="date">-, - -</div>
+                <div id="time">-:--</div>
+            </div>
+
+            <div class="island_popup">
+                <div class="content">
+                    <div class="detais">
+                        <div class="imgBx">
+                            <img src="img.jpg" alt="Profile"> 
+                        </div>
+                        <p>Kevin is calling</p>
+                    </div>
+                    <div class="action">
+                        <ion-icon name="call" class="red"></ion-icon>
+                        <ion-icon name="call" class="green"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+<div class="island_bottom">
+    <a id="unlockBtn" class="content2"></a>
+</div>
+<div id="passcodeScreen" class="passcode-popup">
+    <div class="passcode-box">
+        <h3>Enter Passcode</h3>
+        <div id="passcodeDots" class="dots">
+            <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="keypad">
+            <button class="keypad1">1</button><button class="keypad2">2</button><button class="keypad3">3</button>
+            <button class="keypad4">4</button><button class="keypad5">5</button><button class="keypad6">6</button>
+            <button class="keypad7">7</button><button class="keypad8">8</button><button class="keypad9">9</button>
+            <button class="clear" id="clear">⌫</button><button class="keypad0">0</button><button class="keypadcancel" id="cancel">×</button>
+            <button class="fingerprint" id="fingerprint">
+            <ion-icon name="finger-print-outline"></ion-icon>
+            <ion-icon name="checkmark-outline" class="checkmark"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        <i class="btn btn1"></i>
+            <i class="btn btn2"></i>
+            <i class="btn btn3"></i>
+            <i class="rightSideBtn"></i>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/Iphone-Mock/JS/LockScreen.js"></script>
+</body>
+</html>

@@ -1,3 +1,3 @@
 function openApp(url) {
-  window.location.href = "home.html";
+  window.location.href = "/Iphone-Mock/HTML/home.html";
 }

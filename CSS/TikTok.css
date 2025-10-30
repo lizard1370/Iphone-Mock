@@ -36,7 +36,7 @@ body {
 {
     position: absolute;
     inset: 3px;
-    background: url(/IMG/bg.jpg);
+    background: url(/Iphone-Mock/IMG/bg.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 48px;
@@ -139,7 +139,7 @@ ion-icon.green
   border-radius: 4px;
   background: radial-gradient(#ccc, #666, #222);
   z-index: 10;
-  transform: rotate(0deg); /* tilt the button */
+  transform: rotate(0deg);
   transform-origin: center;
 }
 .btn2
@@ -217,7 +217,7 @@ ion-icon.green
 {
     position: absolute;
     inset: 3px;
-    background: url(/IMG/bg.jpg);
+    background: url(/Iphone-Mock/IMG/bg.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 48px;
