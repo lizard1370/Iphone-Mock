@@ -316,7 +316,15 @@ ion-icon.green
     opacity: 1;
     transition: 0.5s;
 }
+.box.blur-active .inner,
+.box.blur-active .btn,
+.box.blur-active .btn2,
+.box.blur-active .btn3 {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+}
 .passcode-popup {
+  backdrop-filter: blur(6px);
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.85);
@@ -507,7 +515,7 @@ ion-icon.green
 }
 #rotateBtn:hover { 
     background: #333;
-    transform: scale(1.04);
+    transform: scale(1.24);
 }
 
 /* --- Wrapper for rotation --- */
@@ -518,7 +526,7 @@ ion-icon.green
     justify-content: center;
     width: 100%;
     height: 100vh;
-    overflow: visible;
+    overflow: auto;
 }
 
 .phone-rotate-wrapper > .box {
@@ -530,4 +538,13 @@ ion-icon.green
 
 .phone-rotate-wrapper.rotated > .box {
     transform: rotate(90deg) scale(0.95);
+}
+.phone-rotate-wrapper {
+    overflow: hidden;
+}
+.phone-rotate-wrapper.rotated {
+    overflow: visible;
+}
+html, body {
+  overflow: hidden;
 }

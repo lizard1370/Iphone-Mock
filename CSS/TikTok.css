@@ -227,3 +227,53 @@ ion-icon.green
     opacity: 1;
     transition: 0.5s;
 }
+#rotateBtn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 99999;
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: background 0.3s, transform 0.3s;
+}
+#rotateBtn:hover { 
+    background: #333;
+    transform: scale(1.24);
+}
+
+/* --- Wrapper for rotation --- */
+.phone-rotate-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+}
+
+.phone-rotate-wrapper > .box {
+    transition: transform 0.8s ease-in-out;
+    transform-origin: center center;
+    will-change: transform;
+    position: relative;
+}
+
+.phone-rotate-wrapper.rotated > .box {
+    transform: rotate(90deg) scale(0.95);
+}
+.phone-rotate-wrapper {
+    overflow: hidden;
+}
+.phone-rotate-wrapper.rotated {
+    overflow: visible;
+}
+html, body {
+  overflow: hidden;
+}
