@@ -29,11 +29,7 @@ function fetchWeatherForCity(city) {
     })
     .catch(err => console.error(`Error fetching weather for ${city.id}:`, err));
 }
-
-// Loop through all cities and fetch their weather
 cities.forEach(city => fetchWeatherForCity(city));
 function openCity(city) {
   alert("Opening weather for " + city);
-  // Or redirect:
-  // window.location.href = city.toLowerCase().replace(/\s+/g, '-') + ".html";
 }

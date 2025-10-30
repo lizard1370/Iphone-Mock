@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>weather | Jacksonville</title>
+  <link rel='stylesheet' href='/Iphone-Mock/CSS/weathers.css'>
+</head>
+<body>
+  <div class='box'>
+    <div class='inner-home'>
+      <div class='island_popup'>
+        <div class='content'>
+          <div class='detais'>
+            <p>Kevin is calling</p>
+          </div>
+          <div class='action'>
+            <ion-icon name='call' class='red'></ion-icon>
+            <ion-icon name='call' class='green'></ion-icon>
+          </div>
+        </div>
+      </div>
+
+      <h1>Jacksonville, FL</h1>
+      <h1 id='temperature'>Loading temperature...</h1>
+
+      <div class='island_bottom' onclick='openApp("/Iphone-Mock/HTML/home.html")'>
+        <a href='/Iphone-Mock/HTML/home.html' id='editBtn' class='content2'></a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Fetch live weather using Open-Meteo (no API key)
+    async function getWeather() {
+      const lat = 30.3322;
+      const lon = -81.6557;
+      try {
+        const res = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m`);
+        const data = await res.json();
+        const tempC = data.current.temperature_2m;
+        const tempF = (tempC * 9/5 + 32).toFixed(1);
+        document.getElementById('temperature').textContent = `${tempF}°F`;
+      } catch (e) {
+        document.getElementById('temperature').textContent = 'Error loading';
+      }
+    }
+    getWeather();
+  </script>
+
+  <script type='module' src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js'></script>
+  <script nomodule src='https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js'></script>
+  <script src='/Iphone-Mock/JS/weathers.js'></script>
+</body>
+</html>

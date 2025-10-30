@@ -1,3 +1,4 @@
+
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap);
 *
 {
@@ -6,15 +7,47 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body {
-  background: #000;
-  color: #fff;
-  font-family: sans-serif;
-  margin: 0;
+#temperature
+{
+    position: relative;
+    top: 70px;
+    font-family: system-ui, sans-serif;
+    color: rgb(70, 57, 255);
+    margin: 0;
+    font-size: xx-large;
+}
+h1
+{
+    position: absolute;
+    top: 45px;
+    font-family: system-ui, sans-serif;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+}
+.inner-home {
+  position: absolute;
+  inset: 3px;
+  background: #393939;
+  border-radius: 48px;
+  border: 10px solid #000;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
+  justify-content: flex-start; 
+  padding-top: 30px;
+  overflow: hidden;
+}
+body 
+{
+    font-family: system-ui, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
 }
 .box 
 {
@@ -24,19 +57,10 @@ body {
     background: #666;
     border-radius: 50px;
 }
-.box::before 
-{
-    content: '';
-    position: absolute;
-    inset: 3px;
-    background: #000;
-    border-radius: 48px;
-}
 .inner 
 {
     position: absolute;
     inset: 3px;
-    background: url(/Iphone-Mock/IMG/bg.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 48px;
@@ -45,10 +69,6 @@ body {
     justify-content: center;
     opacity: 1;
     transition: 0.5s;
-}
-.box:hover .inner
-{
-    opacity: 1;
 }
 .rightSideBtn
 {
@@ -139,7 +159,7 @@ ion-icon.green
   border-radius: 4px;
   background: radial-gradient(#ccc, #666, #222);
   z-index: 10;
-  transform: rotate(0deg);
+  transform: rotate(0deg); 
   transform-origin: center;
 }
 .btn2
@@ -213,49 +233,22 @@ ion-icon.green
     justify-content: space-between;
     align-items: center;   
 }
-.inner-home
-{
-    position: absolute;
-    inset: 3px;
-    background: url(/Iphone-Mock/IMG/bg.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 48px;
-    border: 10px solid #000;
-    display: flex;
-    justify-content: center;
-    opacity: 1;
-    transition: 0.5s;
-}
-/* Rotate button styling */
-#rotateBtn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #111;
-  color: #fff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 12px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s, transform 0.3s;
-  z-index: 9999;
-}
-#rotateBtn:hover {
-  background: #333;
-  transform: scale(1.05);
-}
 
-/* Smooth rotation */
-.box {
-  transition: transform 0.8s ease-in-out;
-  transform-origin: center center;
-  margin: auto;
-  display: block;
-}
 
-/* Landscape mode */
-.box.rotate {
-  transform: rotate(90deg) scale(0.9);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
